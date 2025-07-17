@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fffdf7;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+     position: fixed;    
+  top: 0;             
+  left: 0;            
+  width: 100%;      
+  z-index: 1000;
+  background: 	#6A1B1A;
+  color: white;
+  padding: 1.3rem 3rem;  /* padding thoda mota */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;  /* font size motha */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;  /* gap thoda mota */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
+  font-size: 1.2rem; /* thoda mota font link sathi */
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  color: #ffd700;  /* hover vr gold color */
+  transform: scale(1.1);  /* thoda zoom */
+}
+
+.nav-links li a:hover {
+  color: #ffd700; /* gold highlight on hover */
+}
+
+.contact-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: maroon;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid maroon;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background: maroon;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #800000;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-details h3 {
+  color: maroon;
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  color: maroon;
+}
+
+.map {
+  margin-top: 20px;
+  border: 2px solid maroon;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer h3 {
+  margin-bottom: 10px;
+}
+.footer p {
+  font-size: 18px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
