@@ -70,28 +70,49 @@ body {
 /* Saree Section */
 .saree-section {
   padding: 40px 20px;
+  background-color: #f9f9f9;
   text-align: center;
 }
+
+.saree-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
 .saree-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 20px;
+  justify-content: center;
 }
+
 .saree-card {
-  background: #f9f9f9;
-  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  border: 1px solid #ddd;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.saree-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .saree-card img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 250px;
+  object-fit: cover;
 }
+
 .saree-card p {
-  margin-top: 10px;
-  font-weight: 600;
+  margin: 10px 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 /*why choose us*/
