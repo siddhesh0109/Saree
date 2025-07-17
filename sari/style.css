@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;  /* font size motha */
+  font-size: 1.2rem;  /* font size motha */
 }
 
 .nav-links {
@@ -37,13 +37,17 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
-  font-size: 1.5rem; /* thoda mota font link sathi */
+  font-size: 1.2rem; /* thoda mota font link sathi */
 }
 
 /* Hover effect */
 .nav-links li a:hover {
   color: #ffd700;  /* hover vr gold color */
   transform: scale(1.1);  /* thoda zoom */
+}
+
+.nav-links li a:hover {
+  color: #ffd700; /* gold highlight on hover */
 }
 
 
@@ -73,16 +77,30 @@ body {
 }
 
 /* Saree Section */
+
+
 .saree-section {
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: #fff4f4; /* soft ethnic pink */
   text-align: center;
 }
 
 .saree-section h2 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 30px;
-  color: #333;
+  color: #6A1B1A; /* deep wine/maroon - suits saree theme */
+  position: relative;
+  font-weight: bold;
+}
+
+.saree-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #D4AF37; /* gold underline */
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .saree-grid {
@@ -103,8 +121,8 @@ body {
 }
 
 .saree-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: scale(1.05); /* Better interaction */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .saree-card img {
@@ -115,58 +133,63 @@ body {
 
 .saree-card p {
   margin: 10px 0;
-  color: #000;
+  color: #4B0082; /* Royal purple - vibrant yet traditional */
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
 }
+
 
 /*why choose us*/
 .why-choose-us {
-  padding: 4rem 2rem;
-  /* background-color: #fdf2f2; */
+  background-color: #fff0f5; /* Light Pink – साडी थीमसाठी graceful background */
+  padding: 60px 20px;
   text-align: center;
 }
 
 .why-choose-us h2 {
-  font-size: 2rem;
-  color: maroon;
-  margin-bottom: 2rem;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #c2185b; /* Deep Pink Heading */
 }
 
 .reasons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .reason {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  width: 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .reason:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 .reason img {
-  width: 150px;
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .reason h3 {
-  color: maroon;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 18px;
+  color: #880e4f;
+  margin-bottom: 10px;
 }
 
 .reason p {
-  font-size: 0.95rem;
-  color: #444;
+  font-size: 14px;
+  color: #555;
 }
 
 
