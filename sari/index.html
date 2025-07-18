@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,108 +10,74 @@
 
 <nav class="navbar">
   <div class="logo">Shree Saree Center</div>
+  <div class="search-container">
+    <input type="text" placeholder="Search sarees..." class="search-input">
+    <button class="search-button">🔍</button>
+  </div>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="saree.html">Sarees</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#categories">Sarees</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="cart.html">🛒 Cart</a></li> <!-- Cart icon with label -->
+    <li><a href="#cart">🛒 Cart</a></li>
   </ul>
 </nav>
 
+<header class="hero-section"></header>
 
-  <header class="hero-section">
-  </header>
-
- <section id="categories" class="saree-section">
+<section id="categories" class="saree-section">
   <h2>Our Saree Collection</h2>
-  <div class="saree-grid">
-    <div class="saree-card">
-      <a href="paithani.html">
-        <img src="images/paithani1.jpg" alt="Paithani Saree">
-        <p>Paithani Saree</p>
-      </a>
+  <div class="slider-wrapper">
+    <button class="slide-btn left" onclick="slideLeft()">❮</button>
+
+    <div class="slider" id="sareeSlider">
+      <!-- Repeat for 20 sarees -->
+      <a class="saree-card" href="#"><img src="images/cotton.jpg" alt="Cotton Saree"><p>Cotton Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/silk.jpg" alt="Silk Saree"><p>Silk Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/kanjivaram.jpg" alt="Kanjivaram Saree"><p>Kanjivaram Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/banarasi.jpg" alt="Banarasi Saree"><p>Banarasi Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/paithani1.jpg" alt="Paithani Saree"><p>Paithani Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/chiffon.jpg" alt="Chiffon Saree"><p>Chiffon Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/georgette.jpg" alt="Georgette Saree"><p>Georgette Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/crepe.jpg" alt="Crepe Saree"><p>Crepe Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/net.jpg" alt="Net Saree"><p>Net Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/linen.jpg" alt="Linen Saree"><p>Linen Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/designer.jpg" alt="Designer Saree"><p>Designer Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/party.jpg" alt="Party Wear Saree"><p>Party Wear Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/wedding.jpg" alt="Wedding Saree"><p>Wedding Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/printed.jpg" alt="Printed Saree"><p>Printed Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/embroidery.jpg" alt="Embroidery Saree"><p>Embroidery Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/halfhalf.jpg" alt="Half-and-Half Saree"><p>Half-and-Half Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/bridal.jpg" alt="Bridal Saree"><p>Bridal Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/daily.jpg" alt="Daily Wear Saree"><p>Daily Wear Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/festive.jpg" alt="Festive Saree"><p>Festive Saree</p></a>
+      <a class="saree-card" href="#"><img src="images/bollywood.jpg" alt="Bollywood Style Saree"><p>Bollywood Saree</p></a>
     </div>
-    <div class="saree-card">
-      <a href="banarsi.html">
-        <img src="images/banarsi.jpg" alt="Banarasi Saree">
-        <p>Banarasi Saree</p>
-      </a>
-    </div>
-    <div class="saree-card">
-      <a href="chanderi.html">
-        <img src="images/chanderi.jpg" alt="Chanderi Saree">
-        <p>Chanderi Saree</p>
-      </a>
-    </div>
-    <div class="saree-card">
-      <a href="cotton.html">
-        <img src="images/cotton.jpg" alt="Cotton Saree">
-        <p>Cotton Saree</p>
-      </a>
-    </div>
+
+    <button class="slide-btn right" onclick="slideRight()">❯</button>
   </div>
 </section>
 
-
-<!-- why choose -->
-<section class="why-choose-us">
-  <h2>Why Choose Us</h2>
-  <div class="reasons">
-    <div class="reason">
-      <img src="images/why1.jpg" alt="Factory Direct" />
-      <h3>Direct from Manufacturer</h3>
-      <p>We provide sarees directly from the factory to ensure best price and quality.</p>
-    </div>
-    <div class="reason">
-      <img src="images/why2.jpg" alt="Bulk Discount" />
-      <h3>Bulk Order Discount</h3>
-      <p>Special discounted pricing for bulk orders across all categories.</p>
-    </div>
-    <div class="reason">
-      <img src="images/why3.jpg" alt="Pan India Delivery" />
-      <h3>Pan India Delivery</h3>
-      <p>Fast and reliable delivery to every corner of India.</p>
-    </div>
-    <div class="reason">
-      <img src="images/why4.jpg" alt="Trusted Retailers" />
-      <h3>Trusted by 500+ Retailers</h3>
-      <p>We’re the preferred partner of hundreds of retailers across the country.</p>
-    </div>
+<footer class="footer">
+  <div>
+    <h3>Contact Us</h3>
+    <p>📍 Main Road, Kolhapur<br>📞 9876543210<br>📧 shreesaree@example.com</p>
   </div>
-</section>
+  <p class="copyright">© 2025 Shree Saree Center. All rights reserved.</p>
+</footer>
 
-<!-- Insta gallery -->
-<!-- <section class="insta-gallery">
-  <h2>Our Instagram Gallery</h2>
-  <div class="gallery">
-    <img src="images/saree1.jpg" alt="Saree 1">
-    <img src="images/saree2.jpg" alt="Saree 2">
-    <img src="images/saree3.jpg" alt="Saree 3">
-    <img src="images/saree4.jpg" alt="Saree 4">
-    <img src="images/saree5.jpg" alt="Saree 5">
-    <img src="images/saree6.jpg" alt="Saree 6">
-    <img src="images/saree7.jpg" alt="Saree 7">
-    <img src="images/saree8.jpg" alt="Saree 8">
-    <img src="images/saree9.jpg" alt="Saree 9">
-    <img src="images/saree10.jpg" alt="Saree 10">
-  </div>
-</section> -->
-
-
-
-  <footer id="contact" class="footer">
-    <div>
-      <h3>Contact Us</h3>
-      <p>📍 Main Road, Kolhapur<br>📞 9876543210<br>📧 shreesaree@example.com</p>
-    </div>
-    <p class="copyright">© 2025 Shree Saree Center. All rights reserved.</p>
-  </footer>
-
-</body>
-<!-- Sticky WhatsApp Button -->
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
 </a>
 
+<script>
+  const slider = document.getElementById("sareeSlider");
+  function slideLeft() {
+    slider.scrollBy({ left: -950, behavior: 'smooth' });
+  }
+  function slideRight() {
+    slider.scrollBy({ left: 950, behavior: 'smooth' });
+  }
+</script>
+</body>
 </html>
