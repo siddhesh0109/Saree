@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +39,50 @@ body {
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
   font-size: 1.2rem; /* thoda mota font link sathi */
+  }
+  .search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid maroon;
+  border-radius: 25px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  transition: box-shadow 0.3s ease;
 }
+
+.search-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 25px;
+  background: transparent;
+}
+
+.search-button {
+  background-color: maroon;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #a00000;
+}
+
 
 /* Hover effect */
 .nav-links li a:hover {
@@ -53,7 +97,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background-image: url('heroimg.png'); /* add your image */
+  background-image: url('images/heroimg.png'); /* add your image */
   height: 80vh;
   background-size: cover;
   background-position: center;
@@ -78,19 +122,27 @@ body {
 
 /* Saree Section */
 
+ .slider-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 10px;
+    }
 
-.saree-section {
-  padding: 40px 20px;
-  background-color: #fff4f4; /* soft ethnic pink */
-  text-align: center;
-}
-
-.saree-section h2 {
+    .slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .saree-section h2 {
   font-size: 32px;
   margin-bottom: 30px;
   color: #6A1B1A; /* deep wine/maroon - suits saree theme */
   position: relative;
   font-weight: bold;
+  text-align: center;
 }
 
 .saree-section h2::after {
@@ -103,40 +155,62 @@ body {
   border-radius: 2px;
 }
 
-.saree-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+    .saree-card {
+      flex: 0 0 auto;
+      width: 300px;
+      border: 1px solid #ddd;
+      text-align: center;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-decoration: none;
+      color: #333;
+    }
 
-.saree-card {
-  width: 200px;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .saree-card:hover {
+      transform: scale(1.05);
+    }
 
-.saree-card:hover {
-  transform: scale(1.05); /* Better interaction */
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-}
+    .saree-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      padding: 10px;
+    }
 
-.saree-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: maroon;
+      color: white;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      padding: 10px 14px;
+      z-index: 2;
+      border-radius: 50%;
+    }
 
-.saree-card p {
-  margin: 10px 0;
-  color: #4B0082; /* Royal purple - vibrant yet traditional */
-  font-weight: bold;
-  font-size: 17px;
-}
+    .slide-btn.left {
+      left: 5px;
+    }
+
+    .slide-btn.right {
+      right: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .saree-card {
+        width: 160px;
+      }
+
+      .saree-card img {
+        height: 180px;
+      }
+    }
 
 
 /*why choose us*/
