@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Types of Sarees</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fffdf7;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+     position: fixed;    
+  top: 0;             
+  left: 0;            
+  width: 100%;      
+  z-index: 1000;
+  background: 	#6A1B1A;
+  color: white;
+  padding: 1.3rem 3rem;  /* padding thoda mota */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;  /* font size motha */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;  /* gap thoda mota */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
+  font-size: 1.2rem; /* thoda mota font link sathi */
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  color: #ffd700;  /* hover vr gold color */
+  transform: scale(1.1);  /* thoda zoom */
+}
+
+.nav-links li a:hover {
+  color: #ffd700; /* gold highlight on hover */
+}
+    
+    h1 {
+      text-align: center;
+      color: #b30059;
+    }
+    .saree-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .saree-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 260px;
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .saree-card:hover {
+      transform: scale(1.03);
+    }
+    .saree-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .saree-title {
+      font-size: 20px;
+      color: #b30059;
+      margin-top: 12px;
+    }
+    .saree-desc {
+      font-size: 14px;
+      color: #444;
+      margin-top: 6px;
+    }
+
+    .footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.footer h3 {
+  margin-bottom: 10px;
+}
+.footer p {
+  font-size: 18px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+  #s1{
+    width: 180px;
+  
+  }  
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Shree Saree Center</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="saree.html">Sarees</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html">🛒 Cart</a></li> <!-- Cart icon with label -->
+  </ul>
+</nav>
+  <h1>Explore Our Saree Collections</h1>
+
+  <div class="saree-container">
+    <!-- 1 -->
+    <div class="saree-card">
+      <img src="images/cotton.jpg" id="s1" alt="Cotton Saree">
+      <div class="saree-title">Cotton Sarees</div>
+      <div class="saree-desc">Lightweight, breathable, perfect for summer.</div>
+    </div>
+
+    <!-- 2 -->
+    <div class="saree-card">
+      <img src="images/silk.jpg" id="s2" alt="Silk Saree">
+      <div class="saree-title">Silk Sarees</div>
+      <div class="saree-desc">Elegant and perfect for weddings.</div>
+    </div>
+
+    <!-- 3 -->
+    <div class="saree-card">
+      <img src="images/kanjivaram.jpg" id="s3" alt="Kanjivaram Saree">
+      <div class="saree-title">Kanjivaram Sarees</div>
+      <div class="saree-desc">South Indian heritage with gold zari work.</div>
+    </div>
+
+    <!-- 4 -->
+    <div class="saree-card">
+      <img src="images/banarasi.jpg" id="s4" alt="Banarasi Saree">
+      <div class="saree-title">Banarasi Sarees</div>
+      <div class="saree-desc">Royal brocade designs from Varanasi.</div>
+    </div>
+
+    <!-- 5 -->
+    <div class="saree-card">
+      <a href="paithani.html">
+        <img src="images/paithani1.jpg" id="s5" alt="Paithani Saree">
+      </a>
+      <div class="saree-title">Paithani Sarees</div>
+      <div class="saree-desc">Rich silk sarees with peacock & lotus motifs.</div>
+    </div>
+
+    <!-- 6 -->
+    <div class="saree-card">
+      <img src="images/chiffon.jpg" id="s6" alt="Chiffon Saree">
+      <div class="saree-title">Chiffon Sarees</div>
+      <div class="saree-desc">Soft and perfect for party wear.</div>
+    </div>
+
+    <!-- 7 -->
+    <div class="saree-card">
+      <img src="images/georgette.jpg" id="s7" alt="Georgette Saree">
+      <div class="saree-title">Georgette Sarees</div>
+      <div class="saree-desc">Stylish and ideal for any event.</div>
+    </div>
+
+    <!-- 8 -->
+    <div class="saree-card">
+      <img src="images/crepe.jpg" id="s8" alt="Crepe Saree">
+      <div class="saree-title">Crepe Sarees</div>
+      <div class="saree-desc">Graceful texture for semi-formal wear.</div>
+    </div>
+
+    <!-- 9 -->
+    <div class="saree-card">
+      <img src="images/net.jpg" id="s9" alt="Net Saree">
+      <div class="saree-title">Net Sarees</div>
+      <div class="saree-desc">Perfect for glamorous occasions.</div>
+    </div>
+
+    <!-- 10 -->
+    <div class="saree-card">
+      <img src="images/linen.jpg" id="s10" alt="Linen Saree">
+      <div class="saree-title">Linen Sarees</div>
+      <div class="saree-desc">Smart choice for summer and office.</div>
+    </div>
+
+    <!-- Continue for 11-20 -->
+    <div class="saree-card">
+      <img src="images/designer.jpg" id="s11" alt="Designer Saree">
+      <div class="saree-title">Designer Sarees</div>
+      <div class="saree-desc">Exclusive embroidery and styles.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/party.jpg" id="s12" alt="Party Wear Saree">
+      <div class="saree-title">Party Wear Sarees</div>
+      <div class="saree-desc">Sparkling and stylish sarees for events.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/wedding.jpg"id="s13" alt="Wedding Saree">
+      <div class="saree-title">Wedding Sarees</div>
+      <div class="saree-desc">Luxurious sarees for special days.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/printed.jpg"id="s14" alt="Printed Saree">
+      <div class="saree-title">Printed Sarees</div>
+      <div class="saree-desc">Creative prints for everyday charm.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/embroidery.jpg" id="s15"alt="Embroidery Saree">
+      <div class="saree-title">Embroidery Sarees</div>
+      <div class="saree-desc">Classy look with delicate embroidery.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/halfhalf.jpg" id="s16" alt="Half and Half Saree">
+      <div class="saree-title">Half-and-Half Sarees</div>
+      <div class="saree-desc">Dual shade contrast beauty.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/bridal.jpg" id="s17" alt="Bridal Saree">
+      <div class="saree-title">Bridal Sarees</div>
+      <div class="saree-desc">Rich traditional bridal wear.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/daily.jpg" id="s18" alt="Daily Wear Saree">
+      <div class="saree-title">Daily Wear Sarees</div>
+      <div class="saree-desc">Comfortable and easy-to-wear.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/festive.jpg" id="s19" alt="Festive Saree">
+      <div class="saree-title">Festive Sarees</div>
+      <div class="saree-desc">Vibrant for every festival.</div>
+    </div>
+
+    <div class="saree-card">
+      <img src="images/bollywood.jpg" id="s20" alt="Bollywood Saree">
+      <div class="saree-title">Bollywood Style Sarees</div>
+      <div class="saree-desc">Trendy sarees inspired by movies.</div>
+    </div>
+
+  </div>
+
+
+
+  <footer id="contact" class="footer">
+    <div>
+      <h3>Contact Us</h3>
+      <p>📍 Main Road, Kolhapur<br>📞 9876543210<br>📧 shreesaree@example.com</p>
+    </div>
+    <p class="copyright">© 2025 Shree Saree Center. All rights reserved.</p>
+  </footer>
+
+</body>
+<!-- Sticky WhatsApp Button -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+</body>
+</html>
