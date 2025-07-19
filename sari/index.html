@@ -101,12 +101,28 @@
 
 <script>
   const slider = document.getElementById("sareeSlider");
+  const searchInput = document.querySelector(".search-input");
+
   function slideLeft() {
     slider.scrollBy({ left: -950, behavior: 'smooth' });
   }
+
   function slideRight() {
     slider.scrollBy({ left: 950, behavior: 'smooth' });
   }
+
+  const sareeCards = Array.from(slider.querySelectorAll(".saree-card"));
+
+  searchInput.addEventListener("input", () => {
+    const keyword = searchInput.value.toLowerCase();
+
+    sareeCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(keyword) ? "block" : "none";
+    });
+  });
+</script>
+
 </script>
 </body>
 </html>
