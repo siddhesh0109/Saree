@@ -214,58 +214,54 @@ body {
 
 
 /*why choose us*/
-.why-choose-us {
-  background-color: #fff0f5; /* Light Pink – साडी थीमसाठी graceful background */
+.why-us-section {
+  background-color: #fdf1ec;
   padding: 60px 20px;
   text-align: center;
 }
 
-.why-choose-us h2 {
-  font-size: 32px;
+.why-us-section h2 {
+  font-size: 2em;
   margin-bottom: 40px;
-  color: #c2185b; /* Deep Pink Heading */
+  color: #aa1c52;
 }
 
-.reasons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.reason {
-  width: 250px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.why-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.reason:hover {
+.why-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.reason img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.why-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
 }
 
-.reason h3 {
-  font-size: 18px;
-  color: #880e4f;
+.why-card h3 {
+  font-size: 1.2em;
+  color: #d82464;
   margin-bottom: 10px;
 }
 
-.reason p {
-  font-size: 14px;
+.why-card p {
   color: #555;
+  font-size: 0.95em;
 }
-
 
 /* insta gallery */
 .insta-gallery {
