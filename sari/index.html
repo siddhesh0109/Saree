@@ -9,91 +9,93 @@
 <body>
 
 <nav class="navbar">
-  <div class="logo">Shree Saree Center</div>
+  <div class="logo" style="  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
+  font-size: 1.4rem;">Shree Saree Center</div>
   <div class="search-container">
     <input type="text" placeholder="Search sarees..." class="search-input">
-    <button class="search-button">🔍</button>
+    <button class="search-button"></button>
   </div>
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
-    <li><a href="#categories">Sarees</a></li>
+    <li><a href="saree.html">Sarees</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="#cart">🛒 Cart</a></li>
+    <li><a href="cart.html">🛒 Cart</a></li>
   </ul>
 </nav>
 
 <header class="hero-section"></header>
 
 <section id="categories" class="saree-section">
-  <h2>Our Saree Collection</h2>
+  <h2 style="color: #7D0A0A;">Our Saree Collection</h2>
   <div class="slider-wrapper">
     <button class="slide-btn left" onclick="slideLeft()">❮</button>
 
     <div class="slider" id="sareeSlider">
       <!-- Repeat for 20 sarees -->
-      <a class="saree-card" href="#"><img src="images/cotton.jpg" alt="Cotton Saree"><p>Cotton Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/silk.jpg" alt="Silk Saree"><p>Silk Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/kanjivaram.jpg" alt="Kanjivaram Saree"><p>Kanjivaram Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/banarasi.jpg" alt="Banarasi Saree"><p>Banarasi Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/paithani1.jpg" alt="Paithani Saree"><p>Paithani Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/chiffon.jpg" alt="Chiffon Saree"><p>Chiffon Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/georgette.jpg" alt="Georgette Saree"><p>Georgette Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/crepe.jpg" alt="Crepe Saree"><p>Crepe Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/net.jpg" alt="Net Saree"><p>Net Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/linen.jpg" alt="Linen Saree"><p>Linen Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/designer.jpg" alt="Designer Saree"><p>Designer Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/party.jpg" alt="Party Wear Saree"><p>Party Wear Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/wedding.jpg" alt="Wedding Saree"><p>Wedding Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/printed.jpg" alt="Printed Saree"><p>Printed Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/embroidery.jpg" alt="Embroidery Saree"><p>Embroidery Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/halfhalf.jpg" alt="Half-and-Half Saree"><p>Half-and-Half Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/bridal.jpg" alt="Bridal Saree"><p>Bridal Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/daily.jpg" alt="Daily Wear Saree"><p>Daily Wear Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/festive.jpg" alt="Festive Saree"><p>Festive Saree</p></a>
-      <a class="saree-card" href="#"><img src="images/bollywood.jpg" alt="Bollywood Style Saree"><p>Bollywood Saree</p></a>
+      <a class="saree-card" href="Cotton.html"><img src="images/cotton.jpg" alt="Cotton Saree"><p>Cotton Saree</p></a>
+      <a class="saree-card" href="silk.html"><img src="images/silk.jpg" alt="Silk Saree"><p>Silk Saree</p></a>
+      <a class="saree-card" href="kanjivaram.html"><img src="images/kanjivaram.jpg" alt="Kanjivaram Saree"><p>Kanjivaram Saree</p></a>
+      <a class="saree-card" href="banarasi.html"><img src="images/banarasi.jpg" alt="Banarasi Saree"><p>Banarasi Saree</p></a>
+      <a class="saree-card" href="paithani.html"><img src="images/paithani1.jpg" alt="Paithani Saree"><p>Paithani Saree</p></a>
+      <a class="saree-card" href="chiffon.html"><img src="images/chiffon.jpg" alt="Chiffon Saree"><p>Chiffon Saree</p></a>
+      <a class="saree-card" href="georgette.html"><img src="images/georgette.jpg" alt="Georgette Saree"><p>Georgette Saree</p></a>
+      <a class="saree-card" href="crepe.html"><img src="images/crepe.jpg" alt="Crepe Saree"><p>Crepe Saree</p></a>
+      <a class="saree-card" href="net.html"><img src="images/net.jpg" alt="Net Saree"><p>Net Saree</p></a>
+      <a class="saree-card" href="linen.html"><img src="images/linen.jpg" alt="Linen Saree"><p>Linen Saree</p></a>
+      <a class="saree-card" href="designer.html"><img src="images/designer.jpg" alt="Designer Saree"><p>Designer Saree</p></a>
+      <a class="saree-card" href="party_wear.html"><img src="images/party.jpg" alt="Party Wear Saree"><p>Party Wear Saree</p></a>
+      <a class="saree-card" href="wedding.html"><img src="images/wedding.jpg" alt="Wedding Saree"><p>Wedding Saree</p></a>
+      <a class="saree-card" href="printed.html"><img src="images/printed.jpg" alt="Printed Saree"><p>Printed Saree</p></a>
+      <a class="saree-card" href="embroidery.html"><img src="images/embroidery.jpg" alt="Embroidery Saree"><p>Embroidery Saree</p></a>
+      <a class="saree-card" href="half_&_half.html"><img src="images/halfhalf.jpg" alt="Half-and-Half Saree"><p>Half-and-Half Saree</p></a>
+      <a class="saree-card" href="bridal.html"><img src="images/bridal.jpg" alt="Bridal Saree"><p>Bridal Saree</p></a>
+      <a class="saree-card" href="daily_Wear.html"><img src="images/daily.jpg" alt="Daily Wear Saree"><p>Daily Wear Saree</p></a>
+      <a class="saree-card" href="festive_saree.html"><img src="images/festive.jpg" alt="Festive Saree"><p>Festive Saree</p></a>
+      <a class="saree-card" href="bollywood.html"><img src="images/bollywood.jpg" alt="Bollywood Style Saree"><p>Bollywood Saree</p></a>
     </div>
 
     <button class="slide-btn right" onclick="slideRight()">❯</button>
   </div>
 </section>
+
+
   <section class="why-us-section">
   <h2>Why Choose Us?</h2>
   <div class="why-us-grid">
     <div class="why-card">
-      <img src="images/qulity.png" alt="Quality Sarees">
+      <img src="images/why1.jpg" alt="Quality Sarees">
       <h3>Premium Quality</h3>
       <p>We offer only authentic and high-quality sarees sourced directly from weavers.</p>
     </div>
     <div class="why-card">
-      <img src="images/variety.png" alt="Variety of Sarees">
+      <img src="images/why2.jpg" alt="Variety of Sarees">
       <h3>Wide Variety</h3>
       <p>Over 20 types of sarees including Paithani, Banarasi, Kanjivaram and more.</p>
     </div>
     <div class="why-card">
-      <img src="images/price.png" alt="Best Price">
+      <img src="images/why3.jpg" alt="Best Price">
       <h3>Wholesale Price</h3>
       <p>Best rates in the market for bulk and retail orders.</p>
     </div>
     <div class="why-card">
-      <img src="images/support.png" alt="Customer Support">
+      <img src="images/why4.jpg" alt="Customer Support">
       <h3>Trusted Support</h3>
       <p>Friendly support team to help you with inquiries and bulk orders.</p>
     </div>
   </div>
 </section>
 
- <footer id="contact" class="footer">
-    <div>
-      <h3>Contact Us</h3>
-      <p>
-        📍 Main Road, Kolhapur<br>
-        📞 <a href="tel:9876543210" style="color:white; text-decoration: underline;">9876543210</a><br>
-        📧 <a href="mailto:shreesaree@example.com" style="color:white; text-decoration: underline;">shreesaree@example.com</a>
-      </p>
-    </div>
-    <p class="copyright">© 2025 Shree Saree Center. All rights reserved.</p>
-  </footer>
+<footer class="footer">
+  <div>
+    <h3>Contact Us</h3>
+    <p>📍 Main Road, Kolhapur<br>📞 9876543210<br>📧 shreesaree@example.com</p>
+  </div>
+  <p class="copyright">© 2025 Shree Saree Center. All rights reserved.</p>
+</footer>
 
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
@@ -123,6 +125,5 @@
   });
 </script>
 
-</script>
 </body>
 </html>
