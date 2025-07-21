@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +17,7 @@ body {
   left: 0;            
   width: 100%;      
   z-index: 1000;
-  background: 	#6A1B1A;
+  background: 	#7D0A0A;
   color: white;
   padding: 1.3rem 3rem;  /* padding thoda mota */
   display: flex;
@@ -36,53 +35,10 @@ body {
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
-  font-size: 1.2rem; /* thoda mota font link sathi */
-  }
-  .search-container {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border: 2px solid maroon;
-  border-radius: 25px;
-  padding: 6px 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 320px;
-  transition: box-shadow 0.3s ease;
+  font-size: 1rem; /* thoda mota font link sathi */
 }
-
-.search-container:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  padding: 6px 10px;
-  border-radius: 25px;
-  background: transparent;
-}
-
-.search-button {
-  background-color: maroon;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 6px;
-  width: 34px;
-  height: 34px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.search-button:hover {
-  background-color: #a00000;
-}
-
 
 /* Hover effect */
 .nav-links li a:hover {
@@ -97,7 +53,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background-image: url('images/heroimg.png'); /* add your image */
+  background-image: url('images/index.jpg'); /* add your image */
   height: 80vh;
   background-size: cover;
   background-position: center;
@@ -122,27 +78,19 @@ body {
 
 /* Saree Section */
 
- .slider-wrapper {
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      padding: 10px;
-    }
 
-    .slider {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-    }
-    .saree-section h2 {
+.saree-section {
+  padding: 40px 20px;
+  background-color: #fff4f4; /* soft ethnic pink */
+  text-align: center;
+}
+
+.saree-section h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  color: #6A1B1A; /* deep wine/maroon - suits saree theme */
+  color:#7D0A0A; /* deep wine/maroon - suits saree theme */
   position: relative;
   font-weight: bold;
-  text-align: center;
 }
 
 .saree-section h2::after {
@@ -155,113 +103,96 @@ body {
   border-radius: 2px;
 }
 
-    .saree-card {
-      flex: 0 0 auto;
-      width: 300px;
-      border: 1px solid #ddd;
-      text-align: center;
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: #fff;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-      text-decoration: none;
-      color: #333;
-    }
+.saree-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    .saree-card:hover {
-      transform: scale(1.05);
-    }
+.saree-card {
+  width: 200px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .saree-card img {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      padding: 10px;
-    }
+.saree-card:hover {
+  transform: scale(1.05); /* Better interaction */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
 
-    .slide-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: maroon;
-      color: white;
-      border: none;
-      font-size: 22px;
-      cursor: pointer;
-      padding: 10px 14px;
-      z-index: 2;
-      border-radius: 50%;
-    }
+.saree-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
 
-    .slide-btn.left {
-      left: 5px;
-    }
-
-    .slide-btn.right {
-      right: 5px;
-    }
-
-    @media (max-width: 768px) {
-      .saree-card {
-        width: 160px;
-      }
-
-      .saree-card img {
-        height: 180px;
-      }
-    }
+.saree-card p {
+  margin: 10px 0;
+  color: #4B0082; /* Royal purple - vibrant yet traditional */
+  font-weight: bold;
+  font-size: 17px;
+}
 
 
 /*why choose us*/
-.why-us-section {
-  background-color: #fdf1ec;
+.why-choose-us {
+  background-color: #fff0f5; /* Light Pink – साडी थीमसाठी graceful background */
   padding: 60px 20px;
   text-align: center;
 }
 
-.why-us-section h2 {
-  font-size: 2em;
+.why-choose-us h2 {
+  font-size: 32px;
   margin-bottom: 40px;
-  color: #aa1c52;
+  color: maroon; /* Deep Pink Heading */
 }
 
-.why-us-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.why-card {
-  background: white;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+.reason {
+  width: 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.why-card:hover {
+.reason:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.why-card img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 20px;
+.reason img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.why-card h3 {
-  font-size: 1.2em;
-  color: #d82464;
+.reason h3 {
+  font-size: 18px;
+  color: #880e4f;
   margin-bottom: 10px;
 }
 
-.why-card p {
+.reason p {
+  font-size: 14px;
   color: #555;
-  font-size: 0.95em;
 }
+
 
 /* insta gallery */
 .insta-gallery {
@@ -332,3 +263,198 @@ body {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+
+
+.slider-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      
+    }
+    .saree-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #6A1B1A; /* deep wine/maroon - suits saree theme */
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+}
+
+.saree-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #D4AF37; /* gold underline */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+    .saree-card {
+      flex: 0 0 auto;
+      width: 300px;
+      border: 1px solid #ddd;
+      text-align: center;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .saree-card:hover {
+      transform: scale(1.05);
+    }
+
+    .saree-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      padding: 10px;
+    }
+
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: maroon;
+      color: white;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      padding: 10px 14px;
+      z-index: 2;
+      border-radius: 50%;
+      width: 50px;
+    }
+
+    .slide-btn.left {
+      left: 5px;
+    }
+
+    .slide-btn.right {
+      right: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .saree-card {
+        width: 160px;
+      }
+
+      .saree-card img {
+        height: 180px;
+      }
+    }
+
+    /* search-bar */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Pure white background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: 13rem;
+  height: 30px;
+  
+}
+
+.search-container input::placeholder{
+  width: 100%;
+}
+
+/* Input box */
+.search-input {
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  height: 100%;
+  width: 220px;
+  outline: none;
+  color: #333;
+  background-color: transparent;
+}
+
+/* Search button */
+.search-button {
+  background-color: #ffffff;
+  color: #6A1B1A; /* Matches navbar color */
+  border: none;
+  padding: 0 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 100%;
+}
+
+.search-button:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);
+}
+
+.why-us-section {
+  background-color: #fdf1ec;
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+.why-us-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: maroon;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  font-size: 1.2em;
+  color: #d82464;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* cart */
