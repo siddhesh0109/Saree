@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>Paithani Sarees - Shree Saree Center</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
+      /* margin: 0; */
       background-color: #fff8f6;
     }
     .navbar {
@@ -25,6 +26,7 @@
     }
     .saree-section {
       padding: 2rem;
+      margin-top: 70px;
     }
     .product-grid {
       display: grid;
@@ -115,15 +117,20 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Shree Saree Center</div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Sarees</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>
-
+<nav class="navbar">
+  <div class="logo">Shree Saree Center</div>
+    <div class="search-container">
+    <input type="text" placeholder="Search sarees..." class="search-input">
+    <button class="search-button">🔍</button>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="saree.html">Sarees</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html">🛒 Cart</a></li> <!-- Cart icon with label -->
+  </ul>
+</nav>
   <section class="saree-section">
     <h2 style="color: maroon; text-align:center">Paithani Sarees</h2>
     <div class="product-grid">
@@ -131,82 +138,150 @@
       <!-- Product Template -->
       <script>
   const products = [
-    {
-      name: "Royal Blue Paithani",
-      price: "₹4200",
-      oldPrice: "₹5000",
-      images: ["paithani1.jpg", "chanderi.jpg", "paithani1.jpg", "paithani1.jpg"]
-    },
-    {
-      name: "Magenta Gold Paithani",
-      price: "₹4600",
-      oldPrice: "₹5200",
-      images: ["paithani1.jpg", "paithani1.jpg", "paithani1.jpg", "paithani1.jpg"]
-    },
-    {
-      name: "Green Royal Zari Paithani",
-      price: "₹4800",
-      oldPrice: "₹5500",
-      images: ["paithani1.jpg", "paithani1.jpg", "paithani1.jpg", "paithani1.jpg"]
-    },
-    {
-      name: "Dark Maroon Paithani",
-      price: "₹5000",
-      oldPrice: "₹5800",
-      images: ["paithani1.jpg", "paithani1.jpg", "paithani1.jpg", "paithani1.jpg"]
-    }
-  ];
+  {
+    name: "Royal Blue Paithani",
+    price: "₹4200",
+    oldPrice: "₹5000",
+    images: [
+      "images/paithani1.jpg",
+      "images/chanderi.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg"
+    ]
+  },
+  {
+    name: "Magenta Gold Paithani",
+    price: "₹4600",
+    oldPrice: "₹5200",
+    images: [
+      "images/paithani1.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg"
+    ]
+  },
+  {
+    name: "Green Royal Zari Paithani",
+    price: "₹4800",
+    oldPrice: "₹5500",
+    images: [
+      "images/paithani1.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg"
+    ]
+  },
+  {
+    name: "Dark Maroon Paithani",
+    price: "₹5000",
+    oldPrice: "₹5800",
+    images: [
+      "images/paithani1.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg",
+      "images/paithani1.jpg"
+    ]
+  }
+];
 
   const slideIndices = [];
 
 window.onload = function () {
   const grid = document.querySelector('.product-grid');
   products.forEach((product, index) => {
+    slideIndices[index] = 0;  // initialize slider index
+
     const card = document.createElement('div');
     card.className = 'product-card';
-    card.innerHTML = `
-      <div class="slider-container">
-        <div class="product-slider" id="slider-${index}">
-          ${product.images.map(img => `<img src="${img}" alt="${product.name}">`).join('')}
-        </div>
-        <button class="slider-btn prev-btn" onclick="moveSlide(${index}, -1)">&#10094;</button>
-        <button class="slider-btn next-btn" onclick="moveSlide(${index}, 1)">&#10095;</button>
-      </div>
-      <div class="product-info">
-        <h3>${product.name}</h3>
-        <p class="price">${product.price} <span class="discount">${product.oldPrice}</span></p>
-        <button class="add-cart-btn">Add to Cart</button>
-        <button class="buy-now-btn">Buy Now</button>
-      </div>
-    `;
+   card.innerHTML = `
+  <div class="slider-container" onclick="goToDetail(${index})" style="cursor:pointer">
+    <div class="product-slider" id="slider-${index}">
+      ${product.images.map(img => `<img src="${img}" alt="${product.name}">`).join('')}
+    </div>
+    <button class="slider-btn prev-btn" onclick="moveSlide(${index}, -1); event.stopPropagation();">&#10094;</button>
+    <button class="slider-btn next-btn" onclick="moveSlide(${index}, 1); event.stopPropagation();">&#10095;</button>
+  </div>
+  <div class="product-info">
+    <h3>${product.name}</h3>
+    <p class="price">${product.price} <span class="discount">${product.oldPrice}</span></p>
+    <button class="add-cart-btn" data-index="${index}">Add to Cart</button>
+    <button class="buy-now-btn" onclick="goToDetail(${index})">Buy Now</button>
+  </div>
+`;
+
     grid.appendChild(card);
 
-    // 👉 Dynamic slider width set
+    // Set slider width dynamically
     const slider = card.querySelector('.product-slider');
     slider.style.width = `${product.images.length * 100}%`;
   });
+
+  // Add event listeners for Add to Cart buttons
+  document.querySelectorAll('.add-cart-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const i = this.getAttribute('data-index');
+      addToCart(i);
+    });
+  });
 };
 
+function addToCart(index) {
+  const product = products[index];
 
-  function moveSlide(index, direction) {
-    const slider = document.getElementById(`slider-${index}`);
-    const totalSlides = slider.children.length;
-    slideIndices[index] = (slideIndices[index] + direction + totalSlides) % totalSlides;
-    slider.style.transform = `translateX(-${slideIndices[index] * 100}%)`;
+  // Get existing cart or empty array
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Check if product already in cart
+  let existing = cart.find(item => item.name === product.name);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({image: product.images[0],name: product.name, price: product.price, qty: 1});
   }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${product.name} added to cart!`);
+
+  // Redirect to cart page (उदा. cart.html)
+  window.location.href = 'cart.html';
+}
+
+function moveSlide(index, direction) {
+  const slider = document.getElementById(`slider-${index}`);
+  const totalSlides = slider.children.length;
+  slideIndices[index] = (slideIndices[index] + direction + totalSlides) % totalSlides;
+  slider.style.transform = `translateX(-${slideIndices[index] * 100}%)`;
+}
+
+function goToDetail(index) {
+  const selectedProduct = products[index];
+  localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+  window.location.href = "details.html"; // किंवा तुमचं actual detail page
+}
+
+
+//search-bar
+
+
 </script>
 
 
     </div>
   </section>
 
-  <footer class="footer">
-    <p>📍 Main Road, Kolhapur | 📞 9876543210 | 📧 shreesaree@example.com</p>
-    <p>© 2025 Shree Saree Center</p>
+  <footer id="contact" class="footer">
+    <div>
+      <h3>Contact Us</h3>
+      <p>📍 Main Road, Kolhapur<br>📞 9876543210<br>📧 shreesaree@example.com</p>
+    </div>
+    <p class="copyright">© 2025 Shree Saree Center. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  </a>
+</body>
+<!-- Sticky WhatsApp Button -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
 </body>
 </html>
+
