@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Blue Paithani - Shree Saree Center</title>
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script src="saree.js"></script>
+  <style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fffdf7;
+  color: #333;
+}
+
+/* login-signup */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; 
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #888;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #444;
+}
+
+.modal input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal button {
+  background-color: #7D0A0A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal button:hover {
+  background-color: #a31b1b;
+}
+
+.modal a {
+  color: #7D0A0A;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+     position: fixed;    
+  top: 0;             
+  left: 0;            
+  width: 100%;      
+  z-index: 1000;
+  background: 	#7D0A0A;
+  color: white;
+  padding: 1.3rem 3rem;  /* padding thoda mota */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;  /* font size motha */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;  /* gap thoda mota */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  /* font-weight: bold; */
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
+  font-size: 1rem; /* thoda mota font link sathi */
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  color: #ffd700;  /* hover vr gold color */
+  transform: scale(1.1);  /* thoda zoom */
+}
+
+.nav-links li a:hover {
+  color: #ffd700; /* gold highlight on hover */
+}
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 100px;
+    }
+    .left-side {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+ .left-side img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+    .right-side {
+      flex: 1;
+      min-width: 300px;
+      
+    }
+    .right-side h2 {
+      color: maroon;
+      margin-top: 0;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: maroon;
+      font-weight: bold;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+    .buy-now-btn {
+      background-color: maroon;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .related-section {
+      padding: 2rem;
+    }
+    .related-section h3 {
+      color: maroon;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+    .saree-card {
+      background: white;
+      padding: 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      transition: transform 0.2s;
+    }
+    .saree-card:hover {
+      transform: scale(1.05);
+    }
+    .saree-card img {
+      width: 100%;
+      border-radius: 5px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+   /* search-bar */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Pure white background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: 13rem;
+  height: 30px;
+  
+}
+
+.search-container input::placeholder{
+  width: 100%;
+}
+
+/* Input box */
+.search-input {
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  height: 100%;
+  width: 220px;
+  outline: none;
+  color: #333;
+  background-color: transparent;
+}
+
+/* Search button */
+.search-button {
+  background-color: #ffffff;
+  color: #6A1B1A; /* Matches navbar color */
+  border: none;
+  padding: 0 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 100%;
+}
+
+.search-button:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo" style="  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth transition */
+  font-size: 1.4rem;">Shree Saree Center</div>
+  <div class="search-container">
+    <input type="text" placeholder="Search sarees..." class="search-input">
+    <button class="search-button"></button>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="saree.html">Sarees</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+    <li><a href=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+    <div class="left-side">
+        
+      <img src="images/paithani1.jpg" alt="Royal Blue Paithani">
+    </div>
+    <div class="right-side">
+      <h2>Royal Blue Paithani Saree</h2>
+      <p>This Royal Blue traditional Paithani saree features intricate zari work and vibrant colors perfect for weddings and special occasions.</p>
+      <p class="price">₹4200 <span class="old-price">₹5000</span></p>
+      
+      <button class="buy-now-btn">Buy Now</button>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <h3>Related Paithani Sarees</h3>
+    <div class="related-grid">
+      <a href="paithani2.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Magenta Paithani" />
+        <p>Magenta Paithani</p>
+      </a>
+      <a href="paithani3.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Green Zari Paithani" />
+        <p>Green Zari Paithani</p>
+      </a>
+      <a href="paithani4.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Dark Maroon Paithani" />
+        <p>Dark Maroon Paithani</p>
+      </a>
+      <a href="paithani5.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Purple Paithani" />
+        <p>Purple Paithani</p>
+      </a>
+       <a href="paithani5.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Purple Paithani" />
+        <p>Purple Paithani</p>
+      </a>
+       <a href="paithani5.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Purple Paithani" />
+        <p>Purple Paithani</p>
+      </a>
+       <a href="paithani5.html" class="saree-card">
+        <img src="images/paithani1.jpg" alt="Purple Paithani" />
+        <p>Purple Paithani</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Shree Saree Center. All rights reserved.</p>
+  </footer>
+<script src="sarees.js"></script>
+<script>
+  // URL मधून 'id' param वाचा
+  const params = new URLSearchParams(window.location.search);
+  const sareeId = parseInt(params.get("id"));
+
+  // sarees array मधून id नुसार साडी शोधा
+  const saree = sarees.find(s => s.id === sareeId);
+
+  if (saree) {
+    document.getElementById("mainImage").src = saree.mainImage;
+    document.getElementById("mainImage").alt = saree.title;
+
+    document.querySelector(".product-title").textContent = saree.title;
+    document.querySelector(".description").textContent = saree.description;
+    document.querySelector(".price").textContent = saree.price;
+    document.querySelector(".old-price").textContent = saree.oldPrice;
+
+    const thumbnailContainer = document.querySelector(".thumbnail-row");
+    thumbnailContainer.innerHTML = ""; // आधी असलेले thumbnail काढा
+
+    saree.thumbnails.forEach(imgSrc => {
+      const thumb = document.createElement("img");
+      thumb.src = imgSrc;
+      thumb.style.width = "60px";
+      thumb.style.margin = "5px";
+      thumb.style.cursor = "pointer";
+
+      // thumbnail click केल्यावर mainImage बदला
+      thumb.onclick = () => {
+        document.getElementById("mainImage").src = imgSrc;
+      };
+      thumbnailContainer.appendChild(thumb);
+    });
+  } else {
+    // जर id मिळाली नाही तर एरर दाखवा किंवा मुख्य पेजवर redirect करा
+    alert("Saree details not found.");
+    window.location.href = "saree.html"; // किंवा इतर पेजवर redirect करा
+  }
+</script>
+
+
+</body>
+</html>
